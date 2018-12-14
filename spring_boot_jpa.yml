@@ -23,8 +23,7 @@ eureka:
   instance:
     appname: spring_boot_jpa
   client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+    serviceUrl:defaultZone: http://localhost:8761/eureka/
 encrypt:
     key: siwei
 env:
