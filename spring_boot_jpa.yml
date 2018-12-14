@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: spring_boot_jpa 
+  jackson:
+    serialization:
+      indent-output: true
+  datasource:
+    password: tiger
+    tomcat:
+      min-idle: 15
+      max-active: 20
+      test-while-idle: true
+      validation-query: select 1
+      initial-size: 15
+      default-auto-commit: false
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: scott
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.Oracle9Dialect
+eureka:
+  instance:
+    appname: spring_boot_jpa
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+encrypt:
+    key: siwei
+env:
+test888888
