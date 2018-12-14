@@ -12,7 +12,9 @@ spring:
       test-while-idle: true
       validation-query: select 1
       initial-size: 15
-      default-auto-commitfalsedriver-class-name: oracle.jdbc.OracleDriverurl: jdbc:oracle:thin:@localhost:1521:orcl
+      default-auto-commit: false
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:orcl
     username: scott
   jpa:
     show-sql: true
@@ -20,7 +22,9 @@ spring:
 eureka:
   instance:
     appname: spring_boot_jpa
- clientserviceUrl:defaultZone: http://localhost:8761/eureka/
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
 encrypt:
     key: siwei
 env:
